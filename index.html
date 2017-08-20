@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/jq-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js" /></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" /></script>
+    <script type="text/javascript" src="js/jq-ui.js" /></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div class="container clearfix">
+        <header>
+            <!-- <div class="navbar-header">
+                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="glyphicon glyphicon-align-justify" style="font-size:20px;"></span>
+                    </button>
+                    <!-- <a class="navbar-brand logo" href="https://www.livingtree.com/">
+                        <img src="images/logo.png"/>
+                    </a> -->
+            <!--  </div>
+                <div class="navbar-collapse collapse clearfix">
+                    <ul class="nav nav-pills navbar-right">
+                        <li><a href="http://support.livingtree.com">Home</a>
+                        </li>
+                        <li><a href="https://www.livingtree.com/contactus/">Services</a>
+                        </li>
+                        <li><a href="http://blog.livingtree.com">Our Companies</a>
+                        </li>
+                        <li><a href="http://blog.livingtree.com">About Us</a>
+                        </li>
+                        <li><a href="http://blog.livingtree.com">SOS-Emergency</a>
+                        </li>
+                    </ul>
+                </div> -->
+            <!--/.nav-collapse -->
+        </header>
+        <div class="page-header clearfix">
+            <p>
+                Attendance Management System
+            </p>
+            <p>
+                <button id="user_drop"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;cs12&nbsp;<span class="caret"></span></button>
+                <button><span class="glyphicon glyphicon-check"></span>&nbsp;&nbsp;Logout</button>
+            </p>
+        </div>
+        <div class="user_dropdown">
+            <ul class="user_dropdown_list">
+                <li><a href="#" class="log_as">logged in as</a></li>
+                <li><a href="#" class="user_name">Home</a></li>
+                <li><a href="#">Class Manage</a></li>
+                <li><a href="#">Section/Division Manage</a></li>
+                <li><a href="#">SMS Template</a></li>
+                <li><a href="#">Set School Timing</a></li>
+                <li><a href="#">Set bus Timing</a></li>
+            </ul>
+        </div>
+        <div class="row clearfix">
+            <div class="col-xs-3">
+                <div class="panel-group menu-group" id="accordion">
+                    <!-- ==============================1st heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="clickable_class left_panel_heading" id="dashboard"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Dashboard</a>
+                </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="index2.html" target="iframe1" class="panel_body_a" data-child="learn1" id="learn1">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================2nd heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="left_panel_heading"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Student</a>
+                </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="add_student">Add Student</a>
+                            </div>
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="manage_student">Student Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==============================3rd heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="left_panel_heading"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Employee</a>
+                </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="add_employee">Add Employee</a>
+                            </div>
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="manage_employee">Employee Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==============================4th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" id="system" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-signal"></span>&nbsp;&nbsp;System</a>
+                </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================5th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="left_panel_heading"><span class="glyphicon glyphicon-signal"></span>&nbsp;&nbsp;Attendance Report</a>
+                </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="student_daywise"><span class="glyphicon glyphicon-user" style="color:#000;"></span>&nbsp;&nbsp;Student (daywise)</a>
+                            </div>
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="employee_daywise"><span class="glyphicon glyphicon-user" style="color:#000;"></span>&nbsp;&nbsp;Employee (daywise)</a>
+                            </div>
+                            <div class="panel-body left_panel_body">
+                                <a href="student_att_mnthly.html" class="panel_body_a" target="_blank"><span class="glyphicon glyphicon-book" style="color:#000;"></span>&nbsp;&nbsp;Attendance Student (monthly)</a>
+                            </div>
+                            <div class="panel-body left_panel_body">
+                                <a href="#" class="clickable_class panel_body_a" id="absent_student"><span class="glyphicon glyphicon-signal" style="color:#000;"></span>&nbsp;&nbsp;Student Absent Report</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ==============================6th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" id="sent_sms_report" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Sent SMS Report</a>
+                </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================7th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" id="manual_attendance" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Manual Attendance</a>
+                </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================8th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" id="i_activity" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;i Activity</a>
+                </h4>
+                        </div>
+                        <div id="collapseEight" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================9th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine" id="event_holiday" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Events & Holiday</a>
+                </h4>
+                        </div>
+                        <div id="collapseNine" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================10th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen" id="scheduled_alert" class="clickable_class left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Scheduled Alerts</a>
+                </h4>
+                        </div>
+                        <div id="collapseTen" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================11th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" class="left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;E-Home Work</a>
+                </h4>
+                        </div>
+                        <div id="collapseEleven" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================12th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" class="left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Smart School Bus</a>
+                </h4>
+                        </div>
+                        <div id="collapseTwelve" class="panel-collapse collapse">
+                            <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                        </div>
+                    </div>
+                    <!-- ==============================13th heading left======================= -->
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a href="#" class="left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Add Templates</a>
+                </h4>
+                        </div>
+                        <div id="collapseThirteen" class="panel-collapse collapse">
+                        </div>
+                    </div>
+                    <div class="panel panel-default accord_panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                    <a href="#" class="left_panel_heading"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;SOS Emergency</a>
+                </h4>
+                        </div>
+                        <div id="collapseFourteen" class="panel-collapse collapse">
+                        </div>
+                    </div>
+                </div>
+                <!-- ==============================14th heading left buttons======================= -->
+                <div class="panel panel-default accord_panel" style="margin:0;">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#" class="left_panel_heading left_bottom_btn">
+                        <button id="lock_left_scroll"><span class="glyphicon glyphicon-lock"></span></button>
+                        <button id="toggle_left_right"><span class="glyphicon glyphicon-sort"></span></button>
+                        <button id="bottom_btn_refresh"><span class="glyphicon glyphicon-refresh"></button>
+                        <button id="bottom_notify_btn"><span class="glyphicon glyphicon-bullhorn"></button>
+                    </a>
+                </h4>
+                    </div>
+                    <div id="collapseFourteen" class="panel-collapse collapse">
+                        <!-- <div class="panel-body left_panel_body">
+                                        <a href="#" class="panel_body_a" data-child="learn3">Learn more.</a>
+                                    </div> -->
+                    </div>
+                </div>
+                <!-- tooltip on the bottom button -->
+                <div class="popover-example">
+                    <div class="popover top">
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <p id="tooltip_text">you are seeing dashboard you are seeing dashboard you are seeing dashboard</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- tooltip on the bottom button ends -->
+            </div>
+            <!-- ========+++++++++++++++++Left Panel ends===========+++++++++++++++++ -->
+            <div class="col-xs-9">
+            </div>
+        </div>
+        <!-- <footer class="text-center">
+                <p>All rights reserved &copy; 2015</p>
+                <div class="form-group pull-right" id="errors"></div>
+            </footer> -->
+    </div>
+    <div class="container_popup" style="">
+        <div style="" class="modal modal_popup">
+            <div class="modal-header modal-header-alert">
+                <h4>Add Alert</h4>
+                <a class="close" style="" href="#">X</a>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-popup clearfix" id="alert-form" name="form">
+                    <div class="form-group form-group-popup form-type">
+                        <label>Type : </label>
+                        <select class="pull-left selectpicker select_first" id="selectType">
+                            <option value='0' selected>Absent SMS SentOn</option>
+                            <option value='1'>Auto Exit SMS</option>
+                            <option value='2'>Employee Absent SMS</option>
+                            <option value='3'>Attendance Sumary</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-popup form-sub-type" style="display:none">
+                        <label>Sub Type : </label>
+                        <select class="pull-left selectpicker select_first">
+                            <option>Sub Type 1</option>
+                            <option>Sub Type 2</option>
+                            <option>Sub Type 3</option>
+                            <option>Sub Type 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-popup form-timing">
+                        <label>Timing : </label>
+                        <input class="form-control" id="name_field" name="name_field" placeholder="" type="text" style="width:100px;">
+                    </div>
+                    <div class="form-group form-group-popup form-mobile" style="display:none">
+                        <label>Mobile : </label>
+                        <input class="form-control" id="name_field" name="name_field" placeholder="" type="text">
+                    </div>
+                    <div class="form-group form-group-popup form-email" style="display:none">
+                        <label>Email : </label>
+                        <input class="form-control" id="name_field" name="name_field" placeholder="" type="text">
+                    </div>
+                    <div class="form-group form-group-popup">
+                        <input type="button" class="btn btn-success pull-left" id="btn_submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container_popup event_popup" style="">
+        <div style="" class="modal modal_popup event_modal_popup">
+            <div class="modal-header modal-header-alert event_header">
+                <ul class="event_header_list">
+                    <li><a href="#" class="add_event">Add Event</a></li>
+                    <li>|</li>
+                    <li><a href="#">Add Task</a></li>
+                </ul>
+                <a class="close close_popup" style="" href="#">X</a>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-popup clearfix" id="alert-form" name="form">
+                    <div class="form-group form-group-popup form-group-event-popup">
+                        <label class="pull-left" style="width:26%;" id="date_on_event_popup"></label>
+                        <button class="btn btn-success cancel_button pull-right" id="edit_event_detail">Edit event details</button>
+                    </div>
+                    <div class="form-group form-group-popup form-group-event-popup">
+                        <input class="form-control event_name_field" id="event_name_field" name="event_name_field" placeholder="My calendar" type="text" readonly />
+                        <input class="form-control event_name_field" id="event_enter_field" name="event_enter_field" placeholder="Tap to enter event(e.g 7pm meeting)" type="text" style="border:1px solid #428bca" />
+                    </div>
+                    <div class="form-group form-group-popup form-group-event-popup">
+                        <input type="button" class="btn btn-success pull-left btn_event_submit" id="btn_event_cancel" value="Cancel" />
+                        <input type="button" class="btn btn-success pull-left btn_event_submit" id="btn_event_submit" value="Save" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <link href='css/fullcalendar.css' rel='stylesheet' />
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#user_drop').on('click', function() {
+            $('.user_dropdown').fadeToggle();
+        });
+        $('#bottom_btn_refresh').on('click', function() {
+            location.reload();
+        });
+        var toggle = false;
+        $('#toggle_left_right').on('click', function() {
+            if (!toggle) {
+                $('.col-xs-3').css({
+                    'float': 'right',
+                    'margin-right': '0'
+                });
+                //$('.row').css({'margin-left':'0px'});
+                toggle = true;
+            } else {
+                $('.col-xs-3').css({
+                    'float': 'left'
+                });
+                // $('.row').css({'margin-left':'-15px'});
+                toggle = false;
+            }
+        });
+
+
+        $('#bottom_notify_btn').click(function() {
+            $(this).toggleClass('notify_click');
+
+        });
+
+        // Setting left navigation height
+
+        // var head_height = $('.page-header').height(),
+        //     win_height = $(window).height(),
+        //     left_nav_height = win_height - head_height;
+        // $('.col-xs-3').height(left_nav_height);
+    });
+    </script>
+    <script type="text/javascript" src="js/enscroll-0.6.1.min.js"></script>
+    <script type="text/javascript">
+    $('#accordion').enscroll({
+        verticalTrackClass: 'track4',
+        verticalHandleClass: 'handle4'
+    });
+    $('#lock_left_scroll').click(function() {
+        $(this).toggleClass('notify_click');
+        // var scrollTop =
+        $('#accordion').toggleClass('locked');
+        $('#accordion').unbind('scroll');
+        $('.menu-group').next().toggle();
+
+    });
+    </script>
+</body>
+
+</html>

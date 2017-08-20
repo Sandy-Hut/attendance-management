@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add Students</title>
+    
+</head>
+
+<body>
+<div id="body_content">
+	<p class="dashboard_heading"><span class="glyphicon glyphicon-list" style="color:#000;"></span>&nbsp;&nbsp;Add Student</p>
+	<p class="blank_space"></p>
+
+	<form class="form-horizontal clearfix" id="form-horizontal" name="form">
+		<div class="form-group-one col-sm-6">
+			   <div id="errorBox"></div>
+          <div class="form-group"><label>Name : </label><input class="form-control" id="name_field" name="name_field" placeholder="" type="text"></div>
+        
+         <div class="form-group"><label>RFID No : </label><input class="form-control" id="rfid_field" name="rfid_field" type="text"><button class="btn btn-success pull-left cancel_button">Generate RFID </button></div>
+
+          <div class="form-group"><label>Contact No : </label><input class="form-control phone" id="contact_field" name="contact_field" type="text"></div>
+
+          <div class="form-group"><label>Alt_No : </label><input class="form-control phone" id="alt_no_field" name="alt_no_field" type="text"></div>
+
+          <div class="form-group"><label>Class : </label><select class="pull-left selectpicker select_first">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        <select class="pull-left selectpicker">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+            <option>F</option>
+            <option>G</option>
+            <option>H</option>
+          </select>
+          <button class="btn btn-success pull-left cancel_button">Add Class</button><button class="btn btn-success pull-left cancel_button">Add Section</button></div>
+
+          <div class="form-group"><input type="button" class="btn btn-success pull-left" id="btn_submit" value="Submit"/> <button class="btn btn-success pull-left cancel_button" id="btn_cancel">Cancel</button></div>
+      </div>
+
+      <div class="form-group-two col-sm-6">
+          <div class="form-group"><label>E-Mail</label><input class="form-control email" id="email_field" name="email_field" type="text"></div>
+
+          <div class="form-group"><label>Icard No : </label><input class="form-control" id="icard_field" name="icard_field" type="text"></div>
+
+          <div class="form-group"><label>GR_No : </label><input class="form-control" id="gr_field" name="gr_field" type="text"></div>
+
+         
+      </div>
+      
+        </form>
+
+	</div>
+</body>
+</html>

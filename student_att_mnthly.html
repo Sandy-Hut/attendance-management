@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js" /></script>
+    <title>Monthly Student Attendance Report</title>
+    <style type="text/css">
+    
+    .status_btn button {
+        margin-left: 5px;
+    }
+    
+    #month_report_stu_btn_print {
+        background: #484848;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    }
+    #month_report_stu_btn_print:hover{
+        background: #333333;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="body_content">
+        <p class="dashboard_heading"><span class="glyphicon glyphicon-list" style="color:#000;"></span>&nbsp;&nbsp;Student Attendance Report</p>
+        <div class="below_dashboard_heading below_dashboard_heading_stu_day clearfix">
+            <div class="refresh_content select_class_drop ">
+                <span>Class</span>
+                <select>
+                    <option>All</option>
+                    <option>IN</option>
+                    <option>OUT</option>
+                    <option>ABSENT</option>
+                </select>
+                <select>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                </select>
+            </div>
+            <div class="date_box">
+                <span class="pull-left">Month&nbsp;</span>
+                <input type="text" class="form-control" placeholder="">
+            </div>
+            <div class="btn_show_info status_btn">
+                <button id="month_report_stu_btn_submit">Submit</button>
+                <button id="month_report_stu_btn_print" class="month_report_stu_btn_print">Print</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

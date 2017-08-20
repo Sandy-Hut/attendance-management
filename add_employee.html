@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add Employees</title>
+</head>
+
+<body>
+    <div id="body_content">
+        <p class="dashboard_heading"><span class="glyphicon glyphicon-list" style="color:#000;"></span>&nbsp;&nbsp;Add Employee</p>
+        <p class="blank_space"></p>
+        <form class="form-horizontal clearfix" id="form-horizontal" name="form">
+            <div class="form-group-one col-sm-6">
+                <div id="errorBox"></div>
+                <div class="form-group">
+                    <label>Name : </label>
+                    <input class="form-control" id="emp_name_field" name="emp_name_field" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Designation : </label>
+                    <input class="form-control" id="designation_field" name="designation_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Salary : </label>
+                    <input class="form-control" id="salary_field" name="contact_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>RFID No : </label>
+                    <input class="form-control" id="emp_rfid_field" name="emp_rfid_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Emp. Type : </label>
+                    <input class="form-control" id="emp_field" name="emp_field" type="text">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-success pull-left" id="emp_btn_submit" value="Submit" />
+                    <button class="btn btn-success pull-left cancel_button" id="emp_btn_cancel">Cancel</button>
+                </div>
+            </div>
+            <div class="form-group-two col-sm-6">
+                <div class="form-group">
+                    <label>Contact No : </label>
+                    <input class="form-control" id="emp_contact_field" name="emp_contact_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Alt_No : </label>
+                    <input class="form-control" id="emp_alt_field" name="emp_alt_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Email : </label>
+                    <input class="form-control" id="emp_email_field" name="emp_email_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Timing : </label><span class="span_time">Entry Time</span>
+                    <input class="emp-time" id="entry_timing_field" name="entry_timing_field" type="text"><span class="span_time">Exit Time</span>
+                    <input class="emp-time" id="exit_timing_field" name="exit_timing_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Alert No : </label>
+                    <input class="form-control" id="alert_field" name="alert_field" type="text">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<html>

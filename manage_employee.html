@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Manage Employees</title>
+</head>
+
+<body>
+    <div id="body_content">
+        <p class="dashboard_heading"><span class="glyphicon glyphicon-list-alt" style="color:#000;"></span>&nbsp;&nbsp;Employee Manage</p>
+        <div class="btn-toolbar below-manage-heading" role="toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default btn-manage" id="emp_with_sms">Make Present(With SMS)</button>
+                <button type="button" class="btn btn-default btn-manage" id="emp_no_sms">Make Present(No SMS)</button>
+                <button type="button" class="btn btn-default btn-manage btn-disable" id="emp_btn_dis">Disable</button>
+                <button type="button" class="btn btn-default btn-manage btn-enable" id="emp_btn_ena">Enable</button>
+            </div>
+        </div>
+        <div class="search-manage-btn clearfix">
+            <div class="input-group search-input pull-left">
+                <span class="pull-left">Search:</span><span class="pull-left"><input type="text" class="form-control" placeholder=""></span>
+            </div>
+            <div class="tab-manage-toolbar pull-right clearfix">
+                <span class="label manage-tool-btn"><button id="copy_emp">Copy</button></span>
+                <span class="label manage-tool-btn"><button id="csv_emp">CSV</button></span>
+                <span class="label manage-tool-btn"><button id="excel_emp">Excel</button></span>
+                <span class="label manage-tool-btn"><button id="pdf_emp">PDF</button></span>
+                <span class="label manage-tool-btn"><button id="print_emp">Print</button></span>
+                <span class="label manage-tool-btn"><button id="save_emp">Save</button></span>
+                <!-- /input-group -->
+                <!-- <p class="blank_space"></p> -->
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table manage-table manage-employee" style="margin:0;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Sr</th>
+                        <th>Name</th>
+                        <th>type</th>
+                        <th>Designation</th>
+                        <th>Contact Number</th>
+                        <th>RFID</th>
+                        <th>Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>1</td>
+                        <td>Rita</td>
+                        <td>1A</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>
+                            <button class="glyphicon glyphicon-edit" title="edit"></button>
+                            <button class="glyphicon glyphicon-trash"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>2</td>
+                        <td>Neha</td>
+                        <td>1A</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>
+                            <button class="glyphicon glyphicon-edit" title="edit"></button>
+                            <button class="glyphicon glyphicon-trash"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>3</td>
+                        <td>Raj</td>
+                        <td>2A</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>
+                            <button class="glyphicon glyphicon-edit" title="edit"></button>
+                            <button class="glyphicon glyphicon-trash"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>4</td>
+                        <td>Sanjay</td>
+                        <td>1A</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>
+                            <button class="glyphicon glyphicon-edit" title="edit"></button>
+                            <button class="glyphicon glyphicon-trash"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" />
+                        </td>
+                        <td>5</td>
+                        <td>Vijay</td>
+                        <td>2A</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>Table Cell</td>
+                        <td>
+                            <button class="glyphicon glyphicon-edit" title="edit"></button>
+                            <button class="glyphicon glyphicon-trash"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="search-manage-btn manage-bottom-entry clearfix" style="border-bottom:1px solid #ddd;">
+            <div class="input-group search-input pull-left">
+                <span class="pull-left">Showing 1 to 58 of 58 entries</span>
+            </div>
+            <div class="btn-group pull-right manage-bottom-entry-info" role="group" aria-label="true">
+                <button type="button" id="btn_first_emp" class="btn btn-default">First</button>
+                <button type="button" id="btn_prev_emp" class="btn btn-default">Previous</button>
+                <button type="button" id="btn_next_emp" class="btn btn-default">Next</button>
+                <button type="button" id="btn_last_emp" class="btn btn-default">Last</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

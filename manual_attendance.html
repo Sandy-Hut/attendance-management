@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Manual Student Report</title>
+</head>
+
+<body>
+    <div id="body_content">
+        <p class="dashboard_heading"><span class="glyphicon glyphicon-list" style="color:#000;"></span>&nbsp;&nbsp;Student Attendance</p>
+        <div class="below_dashboard_heading below_dashboard_heading_stu_day  clearfix">
+            <div class="manual_att_small_heading"><span>Class:</span></div>
+            <div class="refresh_content select_class_drop manual_att_drop">
+                <select>
+                	<option>All</option>
+                	<option>IN</option>
+                	<option>OUT</option>
+                	<option>ABSENT</option>
+                </select>
+                <select>
+                	<option>A</option>
+                	<option>B</option>
+                	<option>C</option>
+                	<option>D</option>
+                	<option>E</option>
+                </select>
+                <span>Note:select Absent Student Only</span>
+            </div>
+            <div class="manual_att_small_heading pull-left"><span>Absent Student:</span></div>
+            <div class="manual_stu_textbox pull-left clearfix">
+                <input type="text" id="" class="form-control" placeholder="Select some options">
+                <span class="span_totl_stu">Total Student</span><span class="span_totl_stu_count">68</span>
+            </div>
+            <div class="btn-toolbar below-manage-heading pull-left manual_att_below_btn" role="toolbar">
+            <div class="btn-group" style="float:none;">
+                <button type="button" class="btn btn-default btn-manage btn-disable mark_btn_manual_att" id="stu_btn_mark_present">Mark as Present(with sms)</button>
+                <button type="button" class="btn btn-default btn-manage btn-enable mark_btn_manual_att_nosms" id="stu_btn_mark_present_nosms">Mark as Present(no sms</button>
+            </div>
+        </div>
+        </div>
+                    
+        </div>
+
+</body>
+
+</html>
